@@ -2,4 +2,6 @@
 
 require 'counterstring'
 
-Counterstring::Generate.generate
+counterstring = Counterstring::Generate.new
+
+counterstring.generate
