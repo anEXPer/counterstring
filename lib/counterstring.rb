@@ -14,7 +14,7 @@ class Ctrs < Thor
       raise 'Length not an integer!'
     end
 
-    puts counterstring
+    print counterstring
   end
   default_task :generate
 end
