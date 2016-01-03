@@ -2,6 +2,4 @@
 
 require 'counterstring'
 
-counterstring = Generator.new
-
-counterstring.generate
+Ctrs.start(ARGV)

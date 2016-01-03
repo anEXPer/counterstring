@@ -1,9 +1,12 @@
 require 'spec_helper'
+require 'thor_spec_helper'
+
 require 'counterstring'
 
-describe Generator do
+describe Ctrs do
+  let(:output) { capture(:stdout) { subject.command 'foo' } }
 
-  counterstring = Generator.new
+  counterstring = Ctrs.new
 
   describe '#generate' do
 
