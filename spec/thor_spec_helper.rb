@@ -1,4 +1,4 @@
-# For testing thor output, taken from 
+# For testing thor output, taken from
 # https://github.com/erikhuda/thor/blob/master/spec/helper.rb
 # as described here http://bokstuff.com/blog/testing-thor-command-lines-with-rspec/
 

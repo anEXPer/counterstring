@@ -1,17 +1,23 @@
 require 'thor'
 
 class Ctrs < Thor
+  option :length
   desc '[LENGTH]', 'Generate a counterstring of LENGTH'
-  def generate(length: 256)
-
+  def generate
     counterstring = String.new
 
-    if length.is_a? Integer
-      length.times do |x|
-        counterstring << '*'
-      end
+    if options[:length]
+      length = options[:length].to_i
     else
-      raise 'Length not an integer!'
+      length = 256
+    end
+
+    unless length > 0
+      raise 'Length must be an integer greater than 0'
+    end
+
+    length.times do
+      counterstring << '*'
     end
 
     print counterstring
